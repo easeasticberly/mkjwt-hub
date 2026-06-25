@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mk体育 – 运动数据与信息平台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f9fafb;
+            color: #1e1e2f;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+        }
+
+        .page {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        /* hero */
+        .hero {
+            padding: 3rem 0 2rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 550;
+            letter-spacing: -0.02em;
+            color: #0a0a23;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #334155;
+            max-width: 600px;
+        }
+
+        .hero .tagline {
+            display: inline-block;
+            background: #eef2ff;
+            color: #2e3b6b;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 1.2rem;
+        }
+
+        /* 通用section */
+        section {
+            padding: 2.8rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 540;
+            letter-spacing: -0.01em;
+            color: #111827;
+            margin-bottom: 1.2rem;
+        }
+
+        p {
+            margin-bottom: 1.1rem;
+            color: #1f2937;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        a:hover {
+            border-bottom-color: #2563eb;
+        }
+
+        .inline-link {
+            border-bottom: 1px solid #a5c0ff;
+        }
+
+        /* 优势卡片 */
+        .features-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .feature-card {
+            flex: 1 1 200px;
+            background: #ffffff;
+            padding: 1.5rem 1.2rem;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            border: 1px solid #eef1f6;
+        }
+
+        .feature-card h3 {
+            font-size: 1rem;
+            font-weight: 550;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: #475569;
+            margin-bottom: 0;
+        }
+
+        /* FAQ 摘要 */
+        .faq-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-item .question {
+            font-weight: 520;
+            color: #0f172a;
+            margin-bottom: 0.25rem;
+        }
+
+        .faq-item .answer {
+            color: #475569;
+            font-size: 0.95rem;
+        }
+
+        .faq-more {
+            margin-top: 1.2rem;
+            font-size: 0.95rem;
+        }
+
+        /* 底部 */
+        .footer-note {
+            padding: 1.8rem 0 0.5rem 0;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .footer-note a {
+            color: #1e3a8a;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e2e8f0;
+            margin: 0.8rem 0 1.2rem 0;
+        }
+
+        @media (max-width: 500px) {
+            body {
+                padding: 1.5rem 1rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .features-grid {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- hero -->
+    <div class="hero">
+        <span class="tagline">运动信息 · 数据整合</span>
+        <h1>mk体育：快速定位你需要的运动内容</h1>
+        <p>如果你在寻找一个结构清晰、更新及时的运动类信息站点，<a href="https://mkjwt.com.cn" style="border-bottom:1px solid #a5c0ff; font-weight:500;">mk体育</a> 提供了一种更直接的浏览方式——从赛事动态到项目百科，内容按主题组织，方便你按需探索。</p>
+    </div>
+
+    <!-- 优势区 -->
+    <section>
+        <h2>以阅读者视角构建的分类结构</h2>
+        <p>很多运动站点信息庞杂，但 <a href="https://mkjwt.com.cn">mk体育</a> 的导航逻辑以运动项目为基本单元，页面层级清晰，减少反复跳转的干扰。无论你想了解某一项运动的规则演变，还是关注近期赛果，都可以更快找到对应板块。</p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>项目专题</h3>
+                <p>每个主流运动单独成栏，包含背景、术语、冷知识，适合希望逐步深入的用户。</p>
+            </div>
+            <div class="feature-card">
+                <h3>时间线梳理</h3>
+                <p>重要赛事与纪录按时间轴排列，方便横向对比不同年代的运动表现。</p>
+            </div>
+            <div class="feature-card">
+                <h3>精简界面</h3>
+                <p>版式围绕正文展开，没有大面积广告或弹窗，阅读体验更干净。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 说明区：场景与适用用户 -->
+    <section>
+        <h2>这个站点适合哪些场景？</h2>
+        <p>当你只是想快速确认某个运动的比赛规则、历史最高纪录，或者想找一段运动项目的发展脉络时，<a href="https://mkjwt.com.cn">mk体育</a> 的内容组织方式可以减少信息筛选成本。它不追求大而全的新闻流，而是更偏向知识库式的沉淀。</p>
+        <p>比如，你刚接触一项运动，想了解它的基本赛制与常用术语；或者你是内容创作者，需要核对某个运动的关键数据——这些场景下，站点内按运动分类的条目能提供相对直接的参考。</p>
+        <p>需要提醒的是，运动数据具有时效性，重大规则变更或新纪录产生后，站点内容会做相应更新。建议结合官方来源交叉确认关键信息。</p>
+    </section>
+
+    <!-- FAQ 摘要 -->
+    <section>
+        <h2>常见疑问摘要</h2>
+        <div class="faq-item">
+            <div class="question">Q: 站内主要覆盖哪些运动项目？</div>
+            <div class="answer">目前以足球、篮球、网球、田径、游泳等大众项目为主，同时包含部分格斗类与冬季运动的基础条目，后续根据反馈逐步扩展。</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">Q: 内容更新频率如何？</div>
+            <div class="answer">重大赛事周期内会同步更新比赛结果与里程碑数据；常规内容按月度或季度做一次复核与补充。</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">Q: 是否提供数据下载或引用功能？</div>
+            <div class="answer">页面内数据均可直接引用，但建议注明出处。目前不提供批量导出接口。</div>
+        </div>
+        <div class="faq-more">
+            <span>更多问题可浏览站内帮助页面或通过站点底部信息联系维护团队。</span>
+        </div>
+    </section>
+
+    <!-- 底部链接 -->
+    <div class="footer-note">
+        <hr>
+        <p style="margin-bottom:0.4rem;">主站：<a href="https://mkjwt.com.cn">mk体育</a> · 以运动知识为线索的信息集合</p>
+        <p style="font-size:0.85rem; color:#64748b;">本页面仅作用途介绍，内容仅供参考，不构成专业建议。</p>
+    </div>
+
+</div>
+</body>
+</html>
