@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+  <title>再次提及 · 炸金花</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f9f8f6;
+      color: #2c2b2a;
+      font-family: "Noto Serif SC", "Source Han Serif SC", "Times New Roman", serif;
+      line-height: 1.8;
+      letter-spacing: 0.02em;
+      padding: 0 1.2rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 680px;
+      width: 100%;
+      margin: 3rem auto 4rem;
+    }
+
+    /* 标题层级 */
+    h1 {
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      margin-top: 2.8rem;
+      margin-bottom: 0.6rem;
+      color: #1b1817;
+      border-bottom: 1px solid #d8d2c6;
+      padding-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-top: 2.4rem;
+      margin-bottom: 0.8rem;
+      color: #2f2c2a;
+      letter-spacing: 0.05em;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin-top: 1.2rem;
+      margin-bottom: 0.4rem;
+      color: #4a4643;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      text-indent: 2em;
+    }
+
+    p:first-of-type {
+      text-indent: 0;
+    }
+
+    /* 开场短句——无缩进，安静排列 */
+    .opening {
+      text-indent: 0;
+      font-size: 1.1rem;
+      margin: 2.2rem 0 1.8rem 0;
+      padding: 0 0 0 0.2rem;
+      border-left: 2px solid #c6beb0;
+      padding-left: 1.2rem;
+      color: #3e3a36;
+    }
+
+    .opening span {
+      display: block;
+    }
+
+    .opening .line1 {
+      font-size: 1.3rem;
+      font-weight: 350;
+    }
+
+    .opening .line2 {
+      margin-top: 0.6rem;
+      font-style: normal;
+      opacity: 0.8;
+    }
+
+    /* 列表风格 —— 温和、留白 */
+    ul.features {
+      list-style: none;
+      padding: 0;
+      margin: 1.8rem 0 2rem 0;
+    }
+
+    ul.features li {
+      padding: 0.7rem 0 0.7rem 1.8rem;
+      position: relative;
+      border-bottom: 1px dashed #e1dbd1;
+    }
+
+    ul.features li::before {
+      content: "·";
+      position: absolute;
+      left: 0.4rem;
+      color: #8f867b;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    ul.features li:last-child {
+      border-bottom: none;
+    }
+
+    /* 温和引用/卡片 */
+    .quiet-note {
+      background: #f2efe9;
+      padding: 1.2rem 1.6rem;
+      border-radius: 2px;
+      margin: 2rem 0 1.6rem 0;
+      font-size: 0.95rem;
+      color: #3c3935;
+      border-left: 3px solid #b9ad9b;
+    }
+
+    .quiet-note p {
+      text-indent: 0;
+      margin-bottom: 0.3rem;
+    }
+
+    /* FAQ 摘要 */
+    .faq-summary {
+      margin: 2rem 0 1rem;
+      border-top: 1px solid #d4cdc1;
+      padding-top: 1.5rem;
+    }
+
+    .faq-item {
+      margin-bottom: 0.9rem;
+    }
+
+    .faq-item .q {
+      font-weight: 500;
+      color: #332f2b;
+    }
+
+    .faq-item .a {
+      margin-left: 1.2rem;
+      color: #56514b;
+      opacity: 0.85;
+    }
+
+    a {
+      color: #5b5247;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: #c6beb0;
+      transition: color 0.15s;
+    }
+
+    a:hover {
+      color: #2f2922;
+      text-decoration-color: #2f2922;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd8cf;
+      margin: 2.5rem 0 1rem;
+      width: 40%;
+      margin-left: 0;
+    }
+
+    .closing {
+      margin: 2.2rem 0 3rem;
+      font-size: 0.98rem;
+      color: #4f4a44;
+      text-indent: 0;
+      border-top: 1px solid #ddd8cf;
+      padding-top: 1.8rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 520px) {
+      body {
+        padding: 0 1rem;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      .opening {
+        font-size: 1rem;
+        padding-left: 1rem;
+      }
+      .opening .line1 {
+        font-size: 1.15rem;
+      }
+      .quiet-note {
+        padding: 0.9rem 1rem;
+      }
+      ul.features li {
+        padding-left: 1.4rem;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .page {
+        max-width: 720px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- 开场短句：再次到访的叙述感 -->
+    <div class="opening">
+      <span class="line1">记得上次来这里，也是秋天。</span>
+      <span class="line2">页面没怎么变，但我又点开了那个熟悉的名字。</span>
+    </div>
+
+    <!-- 第一段：承接，再次访问与收藏 -->
+    <p>网络上的去处来来去去，能让人再次回头翻看的并不多。我发现自己把某个链接留在了书签栏的角落，每次清理浏览器都不舍得删掉。不是什么热闹的社区，也没有跳动的推送，就是一个安静的页面，标题写着「<a href="https://site-goldenflowers.com">炸金花</a>」。三个字，干干净净，像老朋友的名片。</p>
+
+    <p>这次重新打开，依然没有弹窗，没有耀眼的活动横幅。界面还是那种宽窄适合阅读的版式，字迹清晰，节奏缓慢。我顺手把它挪到了书签栏更靠前的位置——有时候，一个足够简单的东西反而让人想留着。</p>
+
+    <!-- 特点列表：克制表述 -->
+    <h2>· 几个没变过的细节</h2>
+    <ul class="features">
+      <li><strong>牌局记录</strong> —— 每一手都留在历史里，不自动清空，也不催促你删除。你关掉页面再回来，它还在。</li>
+      <li><strong>节奏自控</strong> —— 没有倒计时，没有强制下注。你想看牌就看牌，想停就停在那一局。</li>
+      <li><strong>视觉干净</strong> —— 背景几乎只有纸白色和浅灰，牌面是克制的手绘感，不刺眼，不炫技。</li>
+      <li><strong>无需注册</strong> —— 点开即玩，不收集多余信息。连昵称都是可选的。</li>
+    </ul>
+
+    <!-- 温和卡片：场景/感受 -->
+    <div class="quiet-note">
+      <p>有一回深夜打开，只亮着一盏台灯，屏幕调到最暗。</p>
+      <p>没有对手，也没有计时，纯粹是自己跟概率玩了一会儿。</p>
+      <p>那之后，我就把页面固定在浏览器标签栏了。</p>
+    </div>
+
+    <!-- 第二段叙述：持续关注的理由 -->
+    <p>后来偶尔想起，就点开看看。它每次加载都很快，首页上只有最核心的入口，没有额外推荐，没有新闻流。这种「不增加东西」的态度，在如今反而少见。我想，一个能被持续关注的地方，往往不是因为它在不断变化，而是因为它一直保持着你最初喜欢的样子。对我而言，<a href="https://site-goldenflowers.com">炸金花</a>就是这样的存在。</p>
+
+    <!-- FAQ 摘要（温和，不繁复） -->
+    <div class="faq-summary">
+      <h3>偶尔有人问起</h3>
+      <div class="faq-item">
+        <span class="q">Q：需要下载吗？</span><br>
+        <span class="a">不用，直接通过浏览器打开即可。手机和电脑都适配。</span>
+      </div>
+      <div class="faq-item">
+        <span class="q">Q：有真人玩家吗？</span><br>
+        <span class="a">这更像一个人的牌局模拟，没有匹配系统，也没有在线聊天。你可以理解为在安静地自己练习或消遣。</span>
+      </div>
+      <div class="faq-item">
+        <span class="q">Q：会突然弹出广告吗？</span><br>
+        <span class="a">以我多次使用的经验来说，没有。页面始终保持着最初的简洁。</span>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- 温和结尾 -->
+    <p class="closing">
+      也许你之前路过过这个页面，也许这是第一次听说。不管怎样，如果某天晚上你想起一种简单、不喧哗的牌戏，可以再去看看那个老地址。它还在那里，连标题都没有变过。<br><br>
+      书签栏里，总该留一个不着急点开的地方。
+    </p>
+
+  </div>
+</body>
+</html>
